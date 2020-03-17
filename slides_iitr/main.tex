@@ -1,0 +1,115 @@
+\input{settings}
+\renewcommand*{\bibfont}{\scriptsize}
+
+%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%
+\title{This is a title}
+\author{First Author}
+\date{{\scriptsize\today} \vspace{3em}}
+\institute{\href{mailto:fauthor@iitr.ac.in}{fauthor@iitr.ac.in}\\
+}
+
+\subtitle{This is subtitle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{titleslide_bg.png}}
+	\begin{frame}[plain,t]%{INDIAN INSTITUTE OF TECHNOLOGY ROORKEE}
+		\date{}
+		\titlepage
+		\begin{textblock*}{200mm}(.94\textwidth,-8.46cm)
+			\includegraphics[height=.98cm]{logo_white.png}
+		\end{textblock*}
+	\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% TOC Slide %%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Agenda}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Slide Layout %%%%%%%%%%%%%%%%%
+\section{Course information}
+\begin{frame}[t]{Course information}
+\begin{block}<1->{Course information}
+\begin{itemize}[$\bullet$]
+\item Credits : 04
+%\item Pre-requisite : Nil
+\item Contact hours: 3L, 1T
+\item Relative weights: CWS - 25, MTE - 25, ETE - 50
+\end{itemize}
+\end{block}
+%
+\begin{exampleblock}<2->{Class schedule}
+	\begin{itemize}[$\bullet$]
+		\item Lecture -- Mon, Tue, Thur at 9-10; Room CE-329.
+		\item Tutorial -- Tue 11-12; Room CE-332.
+		\item On Apr.\ 04, 13, 2020 (Sat, Mon) $\Rightarrow$ classes as per Fri.\ time-table
+		\item Apr.\ 14, 2020 (Tue) $\Rightarrow$ non-teaching day
+	\end{itemize}
+\end{exampleblock}
+%
+\begin{alertblock}<3>{Exam schedule}
+	\begin{itemize}[$\bullet$]
+		\item Mid-term: 04 Mar.\ -- 07 Mar.
+		\item End-term: 24 Apr.\ -- 04 May.
+	\end{itemize}
+\end{alertblock}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Slide Layout %%%%%%%%%%%%%%%%%
+%\section{Course information}
+\begin{frame}[t]{Distribution of CWS}
+%
+\begin{exampleblock}{CWS: 25 points}
+	\begin{itemize}[$\bullet$]
+		\item Group tasks / assignment / project \textit{[10 points]}
+		\item Individual assignments \textit{[5 points]}
+		\item Quiz \textit{[10 points}]
+	\end{itemize}
+\end{exampleblock}
+\blfootnote{Source: \citet{HitlinEtc1987Surveycomparison}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Slide Layout %%%%%%%%%%%%%%%%%
+%\section{Course content: overview}
+\begin{frame}[t]{Course content}
+\begin{exampleblock}{Content overview}
+	\begin{itemize}[$\bullet$]
+		\item Introduction and overview%\hfill		03
+		\item Transportation demand and congestion  %\hfill 08
+		\item Transport supply and regulation  %\hfill 10
+		\item Transport cost and pricing  %\hfill 09
+		\item Appraisal and evaluation of transportation projects
+		\item Funding and financing of the transportation projects\footnote{Source: \citet{HitlinEtc1987Surveycomparison}}
+	\end{itemize}
+\end{exampleblock}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%% Slide Layout %%%%%%%%%%%%%%%%%
+\section{Referred books}
+\begin{frame}[t]{References}
+\begin{block}{Some books}
+	\nocite{Agarwal2017PhD,AgarwalEtc2019PatnaIncomeBasedCadytsCalibration}
+	\printbibliography[heading=none,]
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% Slide Layout %%%%%%%%%%%%%%%%%
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{white_bg.png}}
+\begin{frame}[plain,c]
+\begin{center}
+\definecolor{IITRBlue}{RGB}{26,33,141}
+{\color{IITRBlue}\LARGE \underline{Thanks.}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

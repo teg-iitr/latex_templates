@@ -1,0 +1,96 @@
+% IIT Roorkee presentation theme for beamer class used in Latex
+%
+% Manisha Verma, Department of Mathematics,  <mani7dma@iitr.ac.in>
+% Sudip Roy, Department of Computer Science and Engineering, <sudiproy.fcs@iitr.ac.in>, <http://faculty.iitr.ac.in/~sudiproy.fcs/>
+% Balasubramanian Raman, Department of Computer Science and Engineering, <balarfma@iitr.ac.in>, <https://sites.google.com/site/balaiitr/>
+%
+% Date: July 23, 2015
+% Version 1.0: First public version.
+
+\documentclass[compress]{beamer}
+
+\usetheme{IITR} % To use the theme of IITR for beamer class in Latex
+
+\usepackage{textpos}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz, graphicx}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamercovered{transparent}
+\usebackgroundtemplate{\includegraphics [width=\paperwidth,height=\paperheight]{slide_bg.png}}
+
+\usepackage[
+backend=bibtex,
+natbib=true,
+style=authoryear-comp,
+mincrossrefs=99,
+maxbibnames=99,
+hyperref=true,
+backref=false,
+firstinits=true,
+sortcites=false,
+dashed=false,
+sorting=ydnt]{biblatex}
+
+\def\bibfont{\small}
+
+\addbibresource{references}
+%
+\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace} % See https://github.com/plk/biblatex/issues/373 . kai, jan'2017
+%
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+\usepackage{url}
+\urlstyle{same}
+
+\usepackage{array}
+
+\usepackage{doi}
+
+\usepackage{paralist}
+%\usepackage{enumerate}
+%\usepackage[shortlabels]{enumitem}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{multirow}
+%\usepackage[final]{pdfpages}
+\usepackage{subfig}
+\captionsetup[subfigure]{labelformat=empty}
+
+%footnote without mark
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+\newcommand{\colortableformat}{
+	\renewcommand{\arraystretch}{1.3}
+	\footnotesize
+}
+
+\usepackage[]{todonotes}
+%\usepackage[disable]{todonotes}
+\newcommand{\amit}[2][]
+{\todo[inline,caption={}, size=\scriptsize,
+	color=red!30, #1]{\renewcommand{\baselinestretch}{0.5}\selectfont#2 AA\par}}
+
+
+%%%%% to get the agenda before each section
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+	\frametitle{Agenda}
+	\tableofcontents[currentsection]
+	\end{frame}
+}

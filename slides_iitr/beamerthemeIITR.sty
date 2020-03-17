@@ -1,0 +1,61 @@
+% IIT Roorkee presentation theme for beamer class used in Latex
+%
+% Manisha Verma, Department of Mathematics,  <mani7dma@iitr.ac.in>
+% Sudip Roy, Department of Computer Science and Engineering, <sudiproy.fcs@iitr.ac.in>, <http://faculty.iitr.ac.in/~sudiproy.fcs/>
+% Balasubramanian Raman, Department of Computer Science and Engineering, <balarfma@iitr.ac.in>, <https://sites.google.com/site/balaiitr/>
+%
+% Date: July 23, 2015
+% Version 1.0: First public version.
+
+\ProvidesPackage{beamerthemeIITR}[2015/07/20]
+\usefonttheme[onlylarge]{structurebold}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Colours
+%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{IITRBlue}{RGB}{26,33,141}
+\definecolor{IITRRed}{RGB}{213,24,0}
+\definecolor{SubduedBlue}{RGB}{107,142,168}
+\usecolortheme[named=IITRBlue]{structure}
+\usecolortheme{rose}
+\setbeamercolor{item}{fg=SubduedBlue}
+\setbeamercolor{title}{fg=IITRBlue}
+\setbeamercolor{block title}{fg=IITRBlue,bg=IITRBlue!15!white}
+\setbeamercolor{block body}{fg=black}
+\setbeamercolor{section in head/foot}{fg=IITRBlue}
+\setbeamercolor{separator}{fg=IITRRed}
+\setbeamercolor{page number in head/foot}{fg=white}
+\setbeamercolor{footline}{bg=IITRBlue!30!white,fg=black}
+\setbeamercolor{mini frame}{fg=SubduedBlue}
+\setbeamertemplate{mini frame in other subsection}[default][40]
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Inner theme
+%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{pifont}
+\useinnertheme{rounded}
+\setbeamertemplate{itemize items}{\ding{113}}
+\setbeamertemplate{enumerate items}[default]
+\addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+\addtobeamertemplate{block alerted begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+\addtobeamertemplate{block example begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Outer theme
+%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{background canvas}{}
+\setbeamerfont{footline}{series=\bfseries}
+\useoutertheme{tree}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}{\bfseries\insertframetitle\par\vskip14pt
+\begin{textblock*}{200mm}(.93\textwidth,-1.15cm)
+\includegraphics[height=1.2cm]{logo_color.jpg}
+\end{textblock*}}
+\setbeamertemplate{headline}{%
+\vskip1pt\hskip2pt%
+\hspace*{23pt}\insertnavigation{.65\paperwidth}}
+\setbeamertemplate{footline}[frame number]
+\addtobeamertemplate{title page}{\vskip20pt}{\vfil\centering%
+\pgfpathrectangle{\pgfpoint{0pt}{0pt}}{\pgfpoint{\textwidth}{-2pt}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
